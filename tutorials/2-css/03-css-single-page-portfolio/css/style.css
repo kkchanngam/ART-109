@@ -1,0 +1,138 @@
+/* CSS reset (* can only be used for reset because it applies to the entire page)*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font size preferences */
+html {
+    font-size: 100%;
+}
+
+/* general reset */
+
+body {
+    background-color: rgb(74, 3, 25);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgb(255, 215, 230);
+}
+
+header {
+    padding: 5rem; 
+    margin-bottom: 2rem;
+    /* up to 4 values for 4 sides of padding, clockwise */
+    /* background-color: rgb(116, 15, 47);
+    border-bottom: #e46292 1px solid; */
+    /* background: rgb(74, 3, 25); */
+background: linear-gradient(180deg, rgba(255, 215, 230, 1) 0%, rgba(74, 3, 25, 1) 50%);
+/* background-image: url("../images/cats\ warmup.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 10%; */
+}
+
+/* applied to h1 in header only | rem = 16px */
+header h1 {
+    /* color: rgb(255, 215, 230); */
+    /* color: rgb(255, 97, 147); */
+    font-size: 4rem;
+}
+
+nav a {
+   color: rgb(255, 215, 230); 
+   text-decoration: none;
+   display: inline-block;
+   margin: 0.25rem 1rem;
+}
+
+nav {
+    position: absolute;
+    right: 6rem;
+    top: 7.5rem;
+    background-color: rgb(255, 97, 147);
+}
+
+/* main is restricting and doesnt allow customizing inside */
+/* main {
+    max-width: 60rem;
+    margin: 2rem auto;
+} */
+
+.about-section, .contact-section {
+    max-width: 60rem;
+    margin: 2rem auto;
+    margin-bottom: 5rem;
+}
+
+.portfolio-section {
+    max-width: 90rem;
+    margin: 0rem auto;
+    background-image: url("../images/cats\ warmup.png");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: 0% 15%;
+    /* margin-bottom: 5rem; */
+    border-radius: 1.5rem;
+    padding: 0.25rem 0;
+}
+
+.portfolio-item {
+    max-width: 60rem;
+    padding: 1.25rem;
+    text-align: justify;
+    background-color: rgb(74, 3, 25);
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    /* box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); */
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.portfolio-content {
+    max-width: 60rem;
+    margin: 2rem auto;
+    margin-bottom: 5rem;
+}
+
+/* .portfolio-content p {
+    color: rgb(255, 255, 255);
+} */
+
+.portfolio-item p {
+    color: rgb(255, 215, 230);
+    padding: 1.25rem;
+    
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    padding: 2rem 0;
+    color: rgb(255, 215, 230);
+}
+
+h3, h4 {
+    display: inline;
+}
+
+h3 {
+    font-style: italic;
+}
+
+h4{ 
+    font-weight: 400;
+}
+
+footer {
+    background: linear-gradient(0deg, rgba(255, 215, 230, 1) 0%, rgba(74, 3, 25, 1) 100%);
+    padding: 1rem;
+    text-align: right;
+}
