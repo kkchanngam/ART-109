@@ -1,4 +1,26 @@
-/* CSS reset (* can only be used for reset because it applies to the entire page)*/
+/* ========================= color palette */
+
+/* 
+
+bg1: rgb(74, 3, 25)
+bg2: black???
+text1: rgb(255, 215, 230)
+text2: rgb(255, 142, 177)
+accent1: rgb(209, 50, 100)
+accent2: maroon??? 
+
+*/
+
+:root {
+--bg1: rgb(74, 3, 25);
+--text1: rgb(255, 215, 230);
+--text2: rgb(255, 142, 177);
+--accent1: rgb(205, 39, 91);
+}
+
+
+
+/* ========================= CSS reset (* can only be used for reset because it applies to the entire page)*/
 
 *{
     margin: 0;
@@ -8,16 +30,29 @@
 /* respect user font size preferences */
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
-/* general reset */
+/* ========================== general reset */
 
 body {
-    background-color: rgb(74, 3, 25);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg1);
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    
+  font-family: "Commissioner", sans-serif;
+  /* font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "FLAR" 0,
+    "VOLM" 0; */
+    
     font-size: 1.25rem;
     line-height: 1.5;
-    color: rgb(255, 215, 230);
+    color: var(--text1);
+    text-align: justify;
+
 }
 
 header {
@@ -39,27 +74,62 @@ header h1 {
     /* color: rgb(255, 215, 230); */
     /* color: rgb(255, 97, 147); */
     font-size: 4rem;
+    font-family: "Mansalva", sans-serif;
 }
 
 nav a {
-   color: rgb(255, 215, 230); 
+   color: var(--text1); 
    text-decoration: none;
    display: inline-block;
    margin: 0.25rem 1rem;
+   /* transition: background-color 0.5s ease-in; */
 }
 
 nav {
     position: absolute;
     right: 6rem;
     top: 7.5rem;
-    background-color: rgb(255, 97, 147);
+    /* background-color: rgb(209, 50, 100); */
+}
+
+nav a:hover {
+    color: var(--text2);
+    transform: scale(1.25);
 }
 
 /* main is restricting and doesnt allow customizing inside */
-/* main {
-    max-width: 60rem;
-    margin: 2rem auto;
-} */
+
+main {
+    /* max-width: 60rem; */
+    margin: 0px;
+}
+
+@media (max-width: 900px) {
+    main{
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main{
+        margin: 1.5rem;
+    }
+    header h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    main{
+        margin: 1rem;
+    }
+}
 
 .about-section, .contact-section {
     max-width: 60rem;
@@ -83,7 +153,7 @@ nav {
     max-width: 60rem;
     padding: 1.25rem;
     text-align: justify;
-    background-color: rgb(74, 3, 25);
+    background-color: var(--bg1);
     margin-bottom: 3rem;
     border-radius: 1rem;
     /* box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); */
@@ -107,28 +177,35 @@ nav {
 } */
 
 .portfolio-item p {
-    color: rgb(255, 215, 230);
+    /* color: var(--text1); */
     padding: 1.25rem;
-    
 }
 
-.about-content h2,
-.portfolio-content h2,
-.contact-content h2 {
-    padding: 2rem 0;
-    color: rgb(255, 215, 230);
+h2 {
+    padding: 1rem 0;
+    margin: 2rem 0;
+    /* color: var(--text1); */
+    background-color: var(--accent1);
+    border-radius: 3rem;
+    display: inline-block;
+    font-family: "Mansalva", sans-serif;
+    font-size: 2rem;
 }
 
 h3, h4 {
     display: inline;
+    /* font-family: "Mansalva", sans-serif; */
 }
 
-h3 {
+/* h3 {
     font-style: italic;
-}
+    text-decoration: underline;
+    text-decoration-style: wavy;
+} */
 
 h4{ 
     font-weight: 400;
+    font-size: 1rem;
 }
 
 footer {
@@ -136,3 +213,63 @@ footer {
     padding: 1rem;
     text-align: right;
 }
+
+@media (max-width: 835px) {
+    main{
+        margin: 2rem;
+    }
+    nav {
+    position: absolute;
+    right: 1rem;
+    top: 11.5rem;
+}
+}
+
+@media (max-width: 600px) {
+    main{
+        margin: 1.5rem;
+    }
+    header h1 {
+        font-size: 3.25rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p, nav a {
+        font-size: 1rem;
+    }
+    nav {
+    top: 10.5rem;
+}
+}
+
+@media (max-width: 485px) {
+    main{
+        margin: 1rem;
+    }
+    header {
+    padding: 2rem; 
+    }
+    nav {
+    top: 8rem;
+    }
+}
+
+@media (max-height: 700px) {
+    header {
+    padding: 1.5rem; 
+    }
+    nav {
+    top: 7rem;
+    }
+    .portfolio-item {
+        padding: 0.5rem;
+    }
+}
+
+
+/* ============================ style class */
+
+/* .deco-1 {
+    color: var(--text2);
+} */
