@@ -1,0 +1,39 @@
+
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sqaure {
+    background-color: rgb(58, 171, 228);
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+     margin: 50px auto;
+     transition: all 1s;
+}
+
+.sqaure:hover {
+    background-color: rgb(255, 0, 64);
+    transform: rotate(15deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    background-color: rgb(4, 57, 83);
+    color: aliceblue;
+    padding: 15px;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(255, 91, 170);
+    transform: scale(1.12);
+    color: rgb(56, 4, 20);
+}
