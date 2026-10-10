@@ -1,0 +1,81 @@
+/*
+CSS RESETS
+*/
+
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Remove default spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Respect user font settings */
+html {
+  font-size: 100%;
+}
+
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ================== color vars */
+
+:root {
+    --bg: rgb(194, 255, 133);
+    --text: rgb(52, 0, 45);
+}
+
+body.dark {
+    --bg: rgb(52, 0, 45);
+    --text: rgb(194, 255, 133);
+}
+
+/* ==================== gen css */
+
+header {
+    padding: 5rem;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+main {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+img {
+    width: 30rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#sumi {
+    position: absolute;
+    right: 6rem;
+    top: 4rem;
+}
+
+#rain {
+    position: absolute;
+    left: 40rem;
+    bottom: 2rem;
+}
+
