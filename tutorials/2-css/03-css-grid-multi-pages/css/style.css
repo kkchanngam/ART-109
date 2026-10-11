@@ -1,0 +1,225 @@
+/* ========================= color palette */
+
+/* 
+
+bg1: rgb(74, 3, 25)
+bg2: black???
+text1: rgb(255, 215, 230)
+text2: rgb(255, 142, 177)
+accent1: rgb(209, 50, 100)
+accent2: maroon??? 
+
+*/
+
+:root {
+    --bg1: rgb(74, 3, 25);
+    --text1: rgb(255, 215, 230);
+    --text2: rgb(255, 142, 177);
+    --accent1: rgb(205, 39, 91);
+}
+
+
+
+/* ========================= CSS reset 
+can be used for reset because it applies to the entire page*/
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font size preferences */
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ========================== general reset */
+
+body {
+    background-color: var(--bg1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--text1);
+
+}
+
+header {
+    padding: 3rem 5rem;
+}
+
+header h1 {
+    text-shadow: 1px -1px 0 #76767688, -1px 2px 1px #73727277, -2px 4px 1px #76747466, -3px 6px 1px #78777755, -4px 8px 1px #7b7a7a44;
+}
+
+header h1:hover {
+    color: var(--text1);
+}
+
+nav a {
+    color: var(--text1);
+    text-decoration: none;
+    /* margin: 0 0.5rem; */
+}
+
+nav a:hover {
+    color: var(--text2);
+    transform: scale(1.25);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: var(--text1);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    align-self: flex-end;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent1);
+    padding: 1rem;
+}
+
+main {
+    margin: 0;
+}
+
+@media (max-width:1230px) {
+    main {
+        margin: 3rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+    footer img {
+        max-width: 0.5rem;
+        margin: 0 0.25rem;
+    }
+}
+
+.about-content,
+.portfolio-content,
+.contact-content,
+.project-content {
+    max-width: 70rem;
+    margin: 0 auto 7rem auto;
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    margin: 2rem 0;
+}
+
+.portfolio-item{
+    padding: 1rem;
+    background-color: var(--accent1);
+}
+
+.portfolio-item img {
+    border-radius: 1rem;
+}
+
+.project-content h2 {
+    margin: auto 2rem;
+}
+
+.project-content img {
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-content p {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+footer {
+    padding: 1rem;
+}
+
+footer img {
+    display: inline;
+    max-width: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+
+
+/* =========================== flex styling
+no margins in flex boxes */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-item-grid {
+    flex: 1 0 20rem;
+    border-radius: 1rem;
+    /* grow shrink container */
+    /* box-sizing: border-box; */
+}
